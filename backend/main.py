@@ -6,6 +6,18 @@ app = FastAPI()
 async def root():
     return {"message":"Hello World"}
 
-@app.get("/createticket")
+@app.post("/createticket")
 async def create_ticket():
-    return {"S"}
+    pass
+
+@app.get("/getticket")
+async def get_ticket(ticket_id: int):
+    pass
+
+@app.get("/gettickets")
+async def get_tickets():
+    pass
+
+@app.delete("/deleteticket")
+async def delete_ticket(ticket_id: int):
+    pass
