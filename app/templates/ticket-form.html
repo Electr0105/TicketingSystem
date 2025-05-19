@@ -1,0 +1,11 @@
+<form
+hx-post="/createticket"
+hx-target="#form-container"
+hx-swap="outerHTML"
+hx-on="htmx:afterRequest: document.getElementById('ticket-list').dispatchEvent(new Event('refresh'))"
+>
+  <input type="text" name="ticket_title" required>
+  <input type="text" name="ticket_body" required>
+  <input type="text" name="priority" required>
+  <button type="submit">Submit</button>
+</form>

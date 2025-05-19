@@ -1,0 +1,5 @@
+<ul>
+  {% for ticket in tickets %}
+    <li>ID: {{ ticket[0] }} — {{ ticket[1] }} (Priority: {{ ticket[2] }})</li>
+  {% endfor %}
+</ul>

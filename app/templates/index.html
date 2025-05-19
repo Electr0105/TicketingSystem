@@ -5,20 +5,13 @@
 </head>
 <body>
   <h1>Tickets</h1>
-
-  <div id="ticket-list">
-    {% for t in tickets %}
-      <div>{{ t }}</div>
-    {% endfor %}
+  <div id="form-wrapper">
+  <button hx-get="/ticket-form"
+    hx-target="#form-wrapper"
+    hx-swap="outerHTML">
+    Create new ticket
+  </button><br>
   </div>
-
-  <button 
-    hx-get="/tickets" 
-    hx-target="#ticket-form" 
-    hx-swap="innerHTML">
-    New Ticket
-  </button>
-
-  <div id="ticket-form"></div>
+  <div id="ticket-list" hx-get="/tickets" hx-trigger="load" ></div>
 </body>
 </html>
