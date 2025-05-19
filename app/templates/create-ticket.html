@@ -1,1 +1,23 @@
-<h1>Create Ticket</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <form hx-post="/createticket" hx-trigger="submit" hx-headers='{"Content-Type":"application/json"}' hx-ext="json-enc">
+      <label for="ticket_title">Title:</label><br>
+      <input type="text" id="ticket_title" name="ticket_title"><br>
+      <label for="ticket_body">Body:</label><br>
+      <input type="text" id="ticket_body" name="ticket_body"><br>
+      <label for="priority">Priority:</label><br>
+      <input type="radio" name="priority" value="MINOR">MINOR</label><br>
+      <input type="radio" name="priority" value="MAJOR">MAJOR</label><br>
+      <input type="radio" name="priority" value="CATASTROPHIC">CATASTROPHIC</label><br>
+      <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

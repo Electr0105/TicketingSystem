@@ -7,5 +7,6 @@ class Priority(Enum):
     CATASTROPHIC = 3
 
 class Ticket(BaseModel):
-    ticket_info: str
+    ticket_title: str
+    ticket_body: str
     priority: Priority
